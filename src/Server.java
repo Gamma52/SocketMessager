@@ -11,7 +11,7 @@ public class Server {
 	private static BufferedWriter out; 
 
 	public static void main(String[] args) {
-		
+		server = new ServerSocket(4004);
 		
 
 	}
