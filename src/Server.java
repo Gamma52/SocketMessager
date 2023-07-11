@@ -3,6 +3,8 @@ import java.io.BufferedWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+//comment
+
 public class Server {
 	
 	private static Socket clientSocket;
