@@ -18,17 +18,22 @@ public class Client {
 		    
 			){			 
 	
-	         System.out.println("Введите текст");       
-	         String word = reader.readLine(); 
-	         
-	         out.write(word + "\n");
-	         out.flush();
-	         String serverWord = in.readLine();
-	         System.out.println(serverWord);
+	         System.out.println("Input text:");
+	         while (clientSocket.isConnected()) {
+	        	 String word = reader.readLine(); 
+	   	         
+	   	         out.write(word + "\n");
+	   	         out.flush();
+	   	         
+	   	         String serverWord = in.readLine();
+	   	         System.out.println("Server recieved:" + serverWord);
+	   	         if (serverWord.equals("exit")) break;
+	        	 
+	         }
+
 		}catch(IOException e) {
 			 System.err.println(e);
 		}
 
 	}
-
 }
